@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+        <script> 
+ 
+            $(function() {
+                $('#addOption').click(function() {
+                    $('#optionDIV').toggle();
+                    
+                });
+            });
+            /*​      $(function() {
+let isShow = true;
+​        $('#addOption').click(function() {
+​          $('#optionDIV').toggle();
+​          isShow = !isShow;
+​          if (isShow) {
+​            $('td').css('padding', '20px 0');
+​          } else {
+​            $('td').css('padding', '40px');
+​          }
+​        });
+
+​      });
+*/
+/*            
+    function doDisplay(){ 
+    let con = document.getElementById("optionDIV");
+    console.log(con.style.display)
+    if(con.style.display==''){ 
+        con.style.display = 'block'; 
+        }else{ 
+            con.style.display = ''; 
+    } };
+*/    
+        </script>
+
+
+        <meta charset="utf-8">
+        <title>Compare</title>
+        <style>
+            main{
+                width: 1080px;
+                height: 1920px;
+                background-color: rgb(238, 251, 255);
+                border: 1px solid black;
+                margin: 0 auto;
+                margin-top: 5em;
+            }
+            h1{
+                width: 1080px;
+                height: 120px;
+                margin-top: 1.5em;
+                background-color: #006298;
+                font-size: 70px;
+                text-align: center;
+                color: white;
+            }
+            img{
+                width: 100px;
+                height: 100px;
+                margin-top: -10em;
+            }
+
+            div{
+                width: 1000px;
+                height: 100px;
+                position: relative;
+                left: 150px;
+                margin: 30px;
+                font-size: 50;
+                color: #006298;
+                margin-top: 50px;
+                position: relative;
+            }
+
+            select {
+                width: 400px;
+                margin: 0px 100px;
+                padding: .8em 3em;
+                border-bottom-color: #006298;
+                border-width: 0px 0px 3px 0px;
+                background-color: transparent;
+                font-family: inherit;
+                font-size: 40;
+                text-align: center;
+                border-radius: 0px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
+
+            select:-ms-expand {
+                display: none;
+            }
+
+            #addOption{
+                font-size: 40;
+                text-align: center;
+                color: gray;
+                margin-top: 50px;
+                padding: 30px;
+                margin-left: 400px
+            }
+
+
+           #optionDIV{
+                display: none;
+                width: 1000px;
+                height: 100px;
+                left: 150px;
+                margin: 30px;
+                margin-bottom: 350px;
+                font-size: 50;
+                color: #006298;
+                margin-top: 10px;
+                position: relative;
+           }
+
+           #class {
+                width: 400px;
+                margin: 30px 100px;
+                padding: 1em 3em;
+                border-bottom-color: #006298;
+                border-width: 0px 0px 3px 0px;
+                background-color: transparent;
+                font-family: inherit;
+                font-size: 40;
+                text-align: center;
+                border-radius: 0px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+           }
+
+           table {
+                font-size : 40;
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 95%;
+                height: 35%;
+                margin: auto;
+                display: block;
+                overflow: auto;
+            }
+
+            tr,td {
+                border: 1px solid #dddddd;
+                text-align: center;
+                padding: 5px;
+                padding: .5em .5em;
+            }
+
+            tr:nth-child(even) {
+                background-color: #59788E;
+            }
+
+
+        </style>
+    </head>
+    
+        
+    <body>
+
+        <main>
+        <header>
+            <h1>예금 모두 비교</h1>
+            <img src="image/logo.png">
+        </header>
+
+        <div>
+            
+            예금기간
+
+        <select name = "예금기간">
+            <option value="전체">전체</option>
+            <option value="6개월">6개월</option>
+            <option value="12개월">12개월</option>
+            <option value="24개월">24개월</option>
+            <option value="36개월">36개월</option>
+        </select>
+
+        </div>
+
+        <div>
+            가입금액
+        <select name = "예금기간">
+            <option value="전체">전체</option>
+            <option value="100만원이하">100만원 이하</option>
+            <option value="500만원이하">500만원 이하</option>
+            <option value="1000만원이하">1000만원 이하</option>
+            <option value="1000만원이상">1000만원 이상</option>
+        </select>
+
+    </div>
+
+        <a href="#" id="addOption"> 옵션추가</a><br/><br/>
+
+        <div id="optionDIV">
+
+            <class>
+                금융권역
+            <select name = "금융권역">
+                <option value="전체">전체</option>
+                <option value="은행">은행</option>
+                <option value="저축은행">저축은행</option>
+            </select>
+            </class>
+        </br>
+
+            <class>
+                대상지역
+            <select name = "대상지역">
+                <option value="전체">전체</option>
+                <option value="서울">서울</option>
+                <option value="부산">부산</option>
+                <option value="경기">경기</option>
+            </select>
+            </class>
+        </br>
+
+            <class>
+                가입대상
+            <select name = "가입대상">
+                <option value="제한없음">제한없음</option>
+                <option value="서민전용">서민전용</option>
+                <option value="일부제한">일부제한</option>
+            </select>
+            </class>
+
+        </div>
+
+        <table>
+          <tr class="title">
+            <th>은행</th>
+            <th>유형</th>
+            <th>금리</th>
+            <th>찜</th>
+          </tr>
+
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+          </tr>
+        </table>
+    
+        </main>
+    </body>
+         
+    
+    
+</html>
